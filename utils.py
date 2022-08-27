@@ -24,9 +24,11 @@ def get_candidates_by_name(candidate_name, list_):
     """
     Возвращает кандидатов по имени
     """
+    result = []
     for item in list_:
         if candidate_name.lower() in item["name"].lower():
-            return item
+            result.append(item)
+    return result
 
 
 def get_candidates_by_skill(skill_name, list_):
