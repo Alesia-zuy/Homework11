@@ -35,6 +35,9 @@ def page_name(candidate_name):
 
 @app.route('/skill/<skill_name>')
 def page_skill(skill_name):
+    """
+    Страница поиска по скилу
+    """
     skill_list = get_candidates_by_skill(skill_name, data)
     return render_template('skill.html', candidates=skill_list, skill=skill_name, len_=len(skill_list))
 
