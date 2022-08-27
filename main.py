@@ -9,4 +9,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def page_main():
-    pass
+    return render_template('list.html', candidates=data)
+
+
+@app.route('/candidate/<int:x>')
+def page_card(x):
+    card = get_candidate(x, data)
+    return render_template('card.html', user=card)
+
+
+if __name__ == '__main__':
+    app.run()

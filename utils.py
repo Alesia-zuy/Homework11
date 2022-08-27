@@ -16,7 +16,7 @@ def get_candidate(candidate_id, list_):
     Возвращает одного кандидата по его id
     """
     for item in list_:
-        if item["id"] == int(candidate_id):
+        if item["id"] == candidate_id:
             return item
 
 
